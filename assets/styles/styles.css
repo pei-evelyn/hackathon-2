@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+h2 {
+  font-family: 'Playfair Display SC', serif;
+}
+
+.logo {
+  font-family: 'Pattaya', sans-serif;
+}
