@@ -7,24 +7,43 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Pattaya&family=Playfair+Display+SC:wght@400;700;900&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles/styles.css">
+  <link rel="stylesheet" href="../assets/styles/styles.css">
 </head>
 <body>
   <div class="container">
-    <div class="stay-in-bg">
-      <header class="">
-        <nav></nav>
+    <div class="stay-in-bg bg">
+      <header class="navbar">
+        <nav>
+          <h1 class="logo">Tappd</h1>
+        </nav>
       </header>
       <main>
-        <div>
-          <h1>Let's grab a drink</h1>
+        <div class="heading-div">
+          <h1 class="stay-in-title">
+            <span>What</span>
+            <span>are you</span>
+            <span>feeling?</span>
+          </h1>
         </div>
         <div>
-          <a href="">Let's stay in</a>
-          <a href="">Let's go out</a>
+          <form action="">
+            <select name="alcohol" id="alcohol" required>
+              <option value="" selected disabled>Select one</option>
+              <option value="vodka">Vodka</option>
+              <option value="whiskey">Whiskey</option>
+              <option value="tequila">Tequila</option>
+              <option value="rum">Rum</option>
+              <option value="gin">Gin</option>
+              <option value="sake">Sake</option>
+              <option value="wine">Wine</option>
+            </select>
+            <div class="stayin-btn-div">
+              <a href="">Submit</a>
+            </div>
+          </form>
         </div>
+
       </main>
-    </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="assets/scripts/main.js"></script>
