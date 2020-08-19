@@ -40,15 +40,13 @@ h1 {
   text-align: right;
 }
 
-
-
 /* Homepage */
 
 .homepage-bg {
   background-image:
     linear-gradient(
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.35)
     ),
     url("../images/home-bg.jpg");
 }
@@ -86,4 +84,58 @@ span {
 }
 
 
-/*
+/* Stay In Page */
+
+.stay-in-bg {
+  background-image:
+    linear-gradient(
+    rgba(255, 255, 255, 0.42),
+    rgba(255, 255, 255, 0.42)
+    ),
+    url("../images/stay-in-bg.jpg");
+}
+
+.stay-in-title {
+  color: #3d3d3d;
+  font-size: 75px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#alcohol {
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    color: #3d3d3d;
+    line-height: 1.5;
+    padding: 1.3rem 1.4rem 1.3rem .8rem;
+    width: 84%;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    margin: 0 auto;
+    border: 1px solid rgb(180, 179, 179);
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: 8px;
+    background-color: #f3f3f3;
+}
+
+.stayin-btn-div {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.stayin-btn-div > a {
+  background-color: #dddddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #3d3d3d;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  opacity: 90%;
+  padding: 1.2rem 5rem;
+  text-align: center;
+  text-decoration: none;
+}
