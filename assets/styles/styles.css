@@ -10,10 +10,80 @@ h1 {
   font-family: 'Playfair Display', serif;
 }
 
-h2 {
-  font-family: 'Playfair Display SC', serif;
+.container{
+  max-height: 800px;
+  height: 100vh;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+
+
+.navbar > nav {
+  padding: 1rem;
+  text-align: center;
 }
 
 .logo {
+  color: #3d3d3d;
   font-family: 'Pattaya', sans-serif;
+  font-size: 2.2rem;
 }
+
+.heading-div {
+  margin: 2rem;
+  text-align: right;
+}
+
+
+
+/* Homepage */
+
+.homepage-bg {
+  background-image:
+    linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3)
+    ),
+    url("../images/home-bg.jpg");
+}
+
+.homepage-title {
+  color: #3d3d3d;
+  font-size: 75px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  margin: 0;
+}
+
+.main-btn-div {
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+.main-btn-div > a {
+  background-color: #dddddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #3d3d3d;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  opacity: 90%;
+  padding: 1.2rem 5rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+/*
