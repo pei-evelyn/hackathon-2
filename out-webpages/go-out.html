@@ -7,22 +7,33 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Pattaya&family=Playfair+Display+SC:wght@400;700;900&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles/styles.css">
+  <link rel="stylesheet" href="../assets/styles/styles.css">
 </head>
 
 <body>
   <div class="container">
-    <div class="go-out-bg">
-      <header class="">
-        <nav></nav>
-      </header>
+    <div class="go-out-bg bg">
+      <header class="navbar">
+        <nav>
+          <h1 class="logo white">Tappd</h1>
+        </nav>
       <main>
-        <div>
-          <h1>Let's grab a drink</h1>
+        <div class="heading-div">
+          <h1 class="go-out-title">
+            <span>Where</span>
+            <span>shall we</span>
+            <span>meet?</span>
+          </h1>
         </div>
         <div>
-          <a href="">Let's stay in</a>
-          <a href="">Let's go out</a>
+          <form>
+            <div class="city-text-input">
+              <input type="text" placeholder="Type city here" required>
+            </div>
+            <div class="go-out-btn-div">
+              <button type="submit" value="submit">Submit</button>
+            </div>
+          </form>
         </div>
       </main>
     </div>

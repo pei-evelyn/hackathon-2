@@ -36,7 +36,7 @@ h1 {
 }
 
 .heading-div {
-  margin: 2rem;
+  margin: 1.5rem 3rem 3rem;
   text-align: right;
 }
 
@@ -75,10 +75,10 @@ span {
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #3d3d3d;
   font-family: 'Playfair Display SC', serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
   opacity: 90%;
-  padding: 1.2rem 5rem;
+  padding: 1.2rem 4.5rem;
   text-align: center;
   text-decoration: none;
 }
@@ -105,13 +105,12 @@ span {
 
 #alcohol {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-family: 'Noto Sans', sans-serif;
-    font-weight: 700;
     color: #3d3d3d;
     line-height: 1.5;
     padding: 1.3rem 1.4rem 1.3rem .8rem;
-    width: 84%;
+    width: 80%;
     max-width: 100%; /* useful when width is set to anything other than 100% */
     margin: 0 auto;
     border: 1px solid rgb(180, 179, 179);
@@ -122,20 +121,77 @@ span {
 
 .stayin-btn-div {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
-.stayin-btn-div > a {
+.stayin-btn-div > button {
   background-color: #dddddd;
+  border: 1px solid #a8a8a8;
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    0 6px 20px 0 rgba(151, 151, 151, 0.19);
   color: #3d3d3d;
   font-family: 'Playfair Display SC', serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
   opacity: 90%;
-  padding: 1.2rem 5rem;
+  padding: 1rem 4rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Go Out Page*/
+
+
+.white {
+  color: #f3f3f3;
+}
+
+.go-out-bg {
+  background-image:
+    linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+    ),
+    url("../images/go-out-bg1.jpg");
+}
+
+.go-out-title {
+  color: #f3f3f3;
+  font-size: 75px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-text-input {
+  display: flex;
+}
+
+.city-text-input > input {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.3rem;
+  margin: auto;
+  padding: 1.2rem 1.5rem 1.2rem 2rem;
+}
+
+.go-out-btn-div {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.go-out-btn-div > button {
+  background-color: #a7a7a7;
+  border: 1px solid #a8a8a8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(151, 151, 151, 0.19);
+  color: #f7f7f7;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 90%;
+  padding: 1rem 4rem;
   text-align: center;
   text-decoration: none;
 }
