@@ -17,11 +17,10 @@ function getDataWithInput(storedCityName) {
 
 function handleDataSuccess (data) {
   console.log(data)
-  localStorage.clear()
   for (let i = 1; i < 10; i++) {
     const breweryName = document.createElement("h3")
     const websiteTitle = document.createElement("h5")
-    const breweryUrl = document.createElement("p")
+    const breweryUrl = document.createElement("a")
     const addressTitle = document.createElement("h5")
     const breweryAddress = document.createElement("div")
     const breweryStreet = document.createElement("p")
@@ -41,6 +40,7 @@ function handleDataSuccess (data) {
 
     breweryName.textContent = data[i].name
     breweryUrl.textContent = data[i].website_url
+    breweryUrl.setAttribute("href", data[i].website_url)
     breweryStreet.textContent = data[i].street
     breweryCity.textContent = `${data[i].city}, `
     breweryState.textContent = `${data[i].state} `
