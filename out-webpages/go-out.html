@@ -15,7 +15,7 @@
     <div class="go-out-bg bg">
       <header class="navbar">
         <nav>
-          <h1 class="logo white">Tappd</h1>
+          <a href="../homepage.html" class="logo white">Tappd</a>
         </nav>
       </header>
       <main>
@@ -27,12 +27,15 @@
           </h1>
         </div>
         <div>
-          <form>
+          <form id="brewery-form">
             <div class="city-text-input">
               <input type="text" placeholder="Type city here" required>
             </div>
             <div class="go-out-btn-div">
-              <button type="submit" value="submit">Submit</button>
+              <button value="submit" id="brewery-submit-btn">
+                <!-- Submit -->
+                <a href="breweries.html">Submit</a>
+              </button>
             </div>
           </form>
         </div>
@@ -40,6 +43,6 @@
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="../assets/scripts/main.js"></script>
+  <script src="../assets/scripts/Brewery/searchLocations.js"></script>
 </body>
 </html>
