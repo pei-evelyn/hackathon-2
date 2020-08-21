@@ -1,4 +1,5 @@
 function getIdsByValueName(valueName) {
+  alcoholTitle.textContent = ingredientName
   $.ajax({
     method: "GET",
     url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${valueName}`,
@@ -12,12 +13,10 @@ function getIdsByValueName(valueName) {
 }
 
 function handleGetIdsSuccess(data) {
-  const randomIdArr = []
   for (let i = 0; i < 5; i++) {
     const randomNum = Math.floor(Math.random() * data.drinks.length)
     const randomId = parseInt(data.drinks[randomNum].idDrink)
     getDrinkInfo(randomId)
-    // console.log(randomId)
   }
 }
 
@@ -66,7 +65,6 @@ function displayDrinks(arr) {
       ingredientList.append(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6)
       recipeContent.append(drinkName, drinkImg, ingredientList, instructions)
     }
-    alcoholTitle.textContent = ingredientName
   }
 }
 
