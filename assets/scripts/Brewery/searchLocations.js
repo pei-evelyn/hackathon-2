@@ -6,7 +6,7 @@ function handleSubmit(event) {
     .toLowerCase()
     .replace(" ", "_")
   localStorage.setItem("breweryCityName", cityName)
-  window.location.href = "breweries.html"
+  window.location.href = "list-breweries.html"
 }
 
 const breweryForm = document.getElementById("brewery-form")

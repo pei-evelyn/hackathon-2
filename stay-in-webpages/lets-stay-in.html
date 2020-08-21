@@ -15,7 +15,7 @@
   <div class="stay-in-bg bg height-100vh">
     <header class="navbar text-center padding-1">
       <nav>
-        <a href="../homepage.html" class="logo color-light-gray">Tappd</a>
+        <a href="../homepage.html" class="logo color-dark-gray">Tappd</a>
       </nav>
     </header>
     <main>
@@ -27,7 +27,7 @@
         </h1>
       </div>
       <div>
-        <form>
+        <form id="pick-alcohol-form">
           <select name="alcohol" id="alcohol-selection" class="color-light-gray" required>
             <option value="" selected disabled>Select one</option>
             <option value="vodka">Vodka</option>
@@ -37,8 +37,8 @@
             <option value="gin">Gin</option>
           </select>
           <div class="d-flex text-center mt-3rem">
-            <button value="submit" id="stayin-submit-btn" class="a-btn-styling">
-              <a class="color-light-gray text-dec-none" href="recipes.html">Submit</a>
+            <button type="submit" value="submit" id="stayin-submit-btn" class="a-btn-styling color-dark-gray">
+              Submit
             </button>
           </div>
         </form>
@@ -46,7 +46,7 @@
     </main>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="../assets/scripts/Recipes/selectIngredient.js"></script>
+  <script src="../assets/scripts/Recipes/selectAlcohol.js"></script>
 </body>
 
 </html>

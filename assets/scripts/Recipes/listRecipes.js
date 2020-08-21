@@ -1,5 +1,5 @@
 function getIdsByValueName(valueName) {
-  alcoholTitle.textContent = ingredientName
+  alcoholTypeHeading.textContent = alcoholType
   $.ajax({
     method: "GET",
     url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${valueName}`,
@@ -69,8 +69,8 @@ function displayDrinks(arr) {
 }
 
 
-const ingredientName = localStorage.getItem("ingredientName")
-const alcoholTitle = document.getElementById("alcohol-title")
+const alcoholType = localStorage.getItem("alcoholType")
+const alcoholTypeHeading = document.getElementById("alcohol-title")
 const recipeContent = document.querySelector(".recipe-content")
 const randomDrinks = []
-getIdsByValueName(ingredientName)
+getIdsByValueName(alcoholType)
