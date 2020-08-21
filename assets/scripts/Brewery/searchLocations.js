@@ -1,11 +1,13 @@
 function handleSubmit(event) {
-  const breweryFormInput = document.querySelector(".city-text-input").firstElementChild
-  let cityName = breweryFormInput.value
-  cityName = cityName.toLowerCase()
-  cityName = cityName.replace(" ", "_")
+  event.preventDefault()
+  const formData = new FormData(event.target)
+  const cityName = formData
+    .get("city")
+    .toLowerCase()
+    .replace(" ", "_")
   localStorage.setItem("breweryCityName", cityName)
-  breweryFormInput.value = ""
+  window.location.href = "breweries.html"
 }
 
-const submitBtn = document.getElementById("brewery-submit-btn")
-submitBtn.addEventListener("click", handleSubmit)
+const breweryForm = document.getElementById("brewery-form")
+breweryForm.addEventListener("submit", handleSubmit)
