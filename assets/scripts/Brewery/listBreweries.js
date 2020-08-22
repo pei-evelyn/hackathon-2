@@ -4,17 +4,21 @@ function getBreweriesByCityName(storedCityName) {
     url: `https://api.openbrewerydb.org/breweries?by_city=${storedCityName}`,
     success: (breweriesInCity) => {
       if (breweriesInCity.length < 1) {
-        displayErrorMessageForUser()
+        localStorage.clear()
+        const userErrorMessage = renderErrorMessageForUser()
+        containerForBreweryContainers.appendChild(userErrorMessage)
       } else {
         for (let i = 0; i < 10; i++) {
-          let output = renderBrewery(breweriesInCity[i])
-          containerForBreweryContainers.appendChild(output)
+          let renderBreweryOutput = renderBrewery(breweriesInCity[i])
+          containerForBreweryContainers.appendChild(renderBreweryOutput)
         }
+        cityNameTitle.textContent = breweriesInCity[0].city
       }
     },
     error: (error) => {
       console.error(error)
-      displayErrorMessageForUser()
+      const userErrorMessage = renderErrorMessageForUser()
+      containerForBreweryContainers.appendChild(userErrorMessage)
     }
   })
 }
@@ -34,10 +38,10 @@ function renderBrewery(breweryInfo) {
   const phoneTitle = document.createElement("h5")
   const breweryPhone = document.createElement("p")
 
-  websiteTitle.className = "info-title"
-  addressTitle.className = "info-title"
-  phoneTitle.className = "info-title"
-  breweryPhone.className = "mb-2rem"
+  breweryContainer.className = "bg-color-white width-100 padding-1 mb-2rem"
+  websiteTitle.className = "info-title "
+  addressTitle.className = "info-title "
+  phoneTitle.className = "info-title "
 
   websiteTitle.textContent = "Website"
   addressTitle.textContent = "Address"
@@ -61,25 +65,34 @@ function renderBrewery(breweryInfo) {
     addressTitle,
     breweryAddress,
     phoneTitle,
-    breweryPhone)
+    breweryPhone
+  )
 
   return breweryContainer
 }
 
-function displayErrorMessageForUser() {
-  localStorage.clear()
+function renderErrorMessageForUser() {
+  const errorMessageContainer = document.createElement("div")
   const errorMessage = document.createElement("h1")
-  errorMessage.textContent = "No locations found."
+  const buttonContainer = document.createElement("div")
   const tryAgainBtn = document.createElement("a")
+  errorMessage.className = "mb-2rem"
+  buttonContainer.className = "mt-3rem mb-2rem text-center"
   tryAgainBtn.className = "try-again-btn"
+  errorMessage.textContent = "No locations found."
   tryAgainBtn.textContent = "Try Again"
-  tryAgainBtn.setAttribute("href", "go-out.html")
   cityNameTitle.textContent = "Zero"
-  containerForBreweryContainers.append(errorMessage, tryAgainBtn)
+  tryAgainBtn.setAttribute("href", "go-out.html")
+  buttonContainer.appendChild(tryAgainBtn)
+  errorMessageContainer.append(errorMessage, buttonContainer)
+
+  return errorMessageContainer
 }
+
 
 const cityNameOnForm = localStorage.getItem("breweryCityName")
 const containerForBreweryContainers = document.querySelector(".brewery-content")
 const cityNameTitle = document.getElementById("city-name")
+const webpageBg = document.querySelector("brewery-bg")
 
 getBreweriesByCityName(cityNameOnForm)
