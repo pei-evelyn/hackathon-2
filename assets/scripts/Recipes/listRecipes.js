@@ -1,23 +1,35 @@
-function getIdsByValueName(valueName) {
-  alcoholTypeHeading.textContent = alcoholType
+function getDrinkIdsByAlcoholName(valueName) {
   $.ajax({
     method: "GET",
     url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${valueName}`,
     success: (data) => {
-      handleGetIdsSuccess(data)
+      console.log(data.drinks)
+      const drinkIds = selectRandomDrinkIds(data.drinks)
+      console.log(drinkIds)
     },
     error: (error) => {
-      console.error("error1", error)
+      console.error(error)
     }
   })
 }
 
-function handleGetIdsSuccess(data) {
-  for (let i = 0; i < 5; i++) {
-    const randomNum = Math.floor(Math.random() * data.drinks.length)
-    const randomId = parseInt(data.drinks[randomNum].idDrink)
-    getDrinkInfo(randomId)
+// function useRandomNumToGetDrinkRecipes() {
+//   const listOfDrinksByAlcoholType = getDrinkIdsByAlcoholName(alcoholType)
+//   for (let i = 0; i < 5; i++) {
+//     const randomNum = Math.floor(Math.random() * data.drinks.length)
+//     const randomId = parseInt(data.drinks[randomNum].idDrink)
+//     getDrinkInfo(randomId)
+//   }
+// }
+
+function selectRandomDrinkIds(drinks) {
+  const randomDrinkIds = []
+  for (let i = 0; i < 8; i++) {
+    const randomNum = Math.floor(Math.random() * drinks.length)
+    const randomDrinkIdFromList = parseInt(drinks[randomNum].idDrink)
+    randomDrinkIds.push(randomDrinkIdFromList)
   }
+  return randomDrinkIds
 }
 
 function getDrinkInfo(id) {
@@ -29,7 +41,7 @@ function getDrinkInfo(id) {
       displayDrinks(randomDrinks)
     },
     error: (error) => {
-      console.error("error1", error)
+      console.error(error)
     }
   })
 }
@@ -73,4 +85,5 @@ const alcoholType = localStorage.getItem("alcoholType")
 const alcoholTypeHeading = document.getElementById("alcohol-title")
 const recipeContent = document.querySelector(".recipe-content")
 const randomDrinks = []
-getIdsByValueName(alcoholType)
+
+getDrinkIdsByAlcoholName(alcoholType)
