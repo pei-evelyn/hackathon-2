@@ -138,9 +138,9 @@ button, .try-again-btn {
   width: 85%;
 }
 
-.img-size {
-  height: 180px;
-  width: 180px;
+.drink-img-size {
+  height: 230px;
+  width: 230px;
 }
 
 #alcohol-title {
@@ -193,7 +193,7 @@ button, .try-again-btn {
 }
 
 .bg-color-white{
-  background-color: #e6e6e6;
+  background-color: #ececec;
 }
 
 .mb-2rem {
@@ -230,4 +230,8 @@ button, .try-again-btn {
 
 .width-100 {
   width: 100%;
+}
+
+.margin-auto {
+  margin: auto;
 }
