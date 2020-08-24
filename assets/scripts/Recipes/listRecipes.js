@@ -3,6 +3,7 @@ function getDrinkIdsByAlcoholName(valueName) {
     method: "GET",
     url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${valueName}`,
     success: (data) => {
+      alcoholTypeHeading.textContent = valueName
       const drinkIds = selectRandomDrinkIds(data.drinks)
       for (let i = 0; i < drinkIds.length; i++) {
         getDrinkInfo(drinkIds[i])
