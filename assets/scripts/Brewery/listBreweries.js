@@ -28,16 +28,16 @@ function getBreweriesByCityName(storedCityName) {
 function renderBrewery(breweryInfo) {
   const breweryContainer = document.createElement("div")
   const breweryName = document.createElement("h3")
-  const websiteTitle = document.createElement("h5")
+  const websiteTitle = document.createElement("h4")
   const breweryUrl = document.createElement("a")
-  const addressTitle = document.createElement("h5")
+  const addressTitle = document.createElement("h4")
   const breweryAddress = document.createElement("div")
   const breweryStreet = document.createElement("p")
   const addressBlock = document.createElement("p")
   const breweryCity = document.createElement("span")
   const breweryState = document.createElement("span")
   const breweryPostal = document.createElement("span")
-  const phoneTitle = document.createElement("h5")
+  const phoneTitle = document.createElement("h4")
   const breweryPhone = document.createElement("p")
 
   breweryContainer.className = "bg-color-white width-100 padding-1 mb-2rem opacity-95"
