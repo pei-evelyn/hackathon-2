@@ -42,8 +42,9 @@ function selectRandomDrinkIds(drinks) {
 
 function renderDrinkRecipes(drink) {
   const drinkContainer = document.createElement("div")
-  const drinkName = document.createElement("h2")
+  const drinkName = document.createElement("h3")
   const drinkImg = document.createElement("img")
+  const ingredientTitle = document.createElement("h4")
   const ingredientList = document.createElement("ul")
   const ingredient1 = document.createElement("li")
   const ingredient2 = document.createElement("li")
@@ -51,33 +52,39 @@ function renderDrinkRecipes(drink) {
   const ingredient4 = document.createElement("li")
   const ingredient5 = document.createElement("li")
   const ingredient6 = document.createElement("li")
+  const directionTitle = document.createElement("h4")
   const instructions = document.createElement("p")
 
   drinkContainer.className = "bg-color-white width-100 padding-1 mb-2rem d-flex flex-column"
   drinkName.className = "padding-1"
   drinkImg.className = "drink-img-size padding-1"
-  drinkImg.setAttribute("src", drink.strDrinkThumb)
 
-  drinkName.textContent = drink.strDrink
+  drinkImg.setAttribute("src", drink.strDrinkThumb)
+  drinkName.textContent = drink.strDrink.toUpperCase()
+  ingredientTitle.textContent = "INGREDIENTS"
   ingredient1.textContent = `${drink.strMeasure1} ${drink.strIngredient1}`
   ingredient2.textContent = `${drink.strMeasure2} ${drink.strIngredient2}`
   ingredient3.textContent = `${drink.strMeasure3} ${drink.strIngredient3}`
   ingredient4.textContent = `${drink.strMeasure4} ${drink.strIngredient4}`
   ingredient5.textContent = `${drink.strMeasure5} ${drink.strIngredient5}`
   ingredient6.textContent = `${drink.strMeasure6} ${drink.strIngredient6}`
+  directionTitle.textContent = "DIRECTIONS"
   instructions.textContent = drink.strInstructions
-  instructions.className = "padding-1"
-  ingredientList.className = "padding-1"
+  instructions.className = "padding-1 drink-text"
+  ingredientList.className = "padding-1 width-100"
 
-  ingredientList.append(
-    ingredient1,
-    ingredient2,
-    ingredient3,
-    ingredient4,
-    ingredient5,
-    ingredient6
-  )
-  drinkContainer.append(drinkName, drinkImg, ingredientList, instructions)
+  const ingredients = [ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6]
+
+  for (let i = 0; i < ingredients.length; i++) {
+    if (ingredients[i].textContent === "null null") {
+      ingredients[i].remove()
+    } else {
+      ingredients[i].className = "drink-text"
+      ingredientList.appendChild(ingredients[i])
+    }
+  }
+
+  drinkContainer.append(drinkName, drinkImg, ingredientTitle, ingredientList, directionTitle, instructions)
   return drinkContainer
 }
 

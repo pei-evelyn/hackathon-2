@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div class="stay-in-bg bg height-100vh">
+  <div class="stay-in-bg bg">
     <header class="navbar text-center padding-1">
       <nav>
         <a href="../homepage.html" class="logo color-dark-gray">Tappd</a>
@@ -21,13 +21,13 @@
     </header>
     <main>
       <div class="heading-div">
-        <h1 class="d-flex flex-column text-left font-4rem">
+        <h1 class="main-title">
           <span>What</span>
           <span>are you</span>
           <span>feeling?</span>
         </h1>
       </div>
-      <div>
+      <div class="button-container">
         <form id="pick-alcohol-form">
           <select name="alcohol" id="alcohol-selection" class="color-light-gray" required>
             <option value="" selected disabled>Select one</option>
@@ -38,7 +38,7 @@
             <option value="gin">Gin</option>
           </select>
           <div class="d-flex text-center mt-3rem">
-            <button type="submit" value="submit" id="stayin-submit-btn" class="a-btn-styling color-dark-gray">
+            <button type="submit" value="submit" id="stayin-submit-btn" class="color-dark-gray">
               SUBMIT
             </button>
           </div>
@@ -47,7 +47,7 @@
     </main>
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="../assets/scripts/Recipes/selectAlcohol.js"></script>
+  <script src="../assets/scripts/Recipes/letsStayIn.js"></script>
 </body>
 
 </html>

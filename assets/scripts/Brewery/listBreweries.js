@@ -7,6 +7,7 @@ function getBreweriesByCityName(storedCityName) {
         localStorage.clear()
         const userErrorMessage = renderErrorMessageForUser()
         containerForBreweryContainers.appendChild(userErrorMessage)
+        webpageBg.classList.add("error-msg-bg")
       } else {
         for (let i = 0; i < 10; i++) {
           let renderBreweryOutput = renderBrewery(breweriesInCity[i])
@@ -19,6 +20,7 @@ function getBreweriesByCityName(storedCityName) {
       console.error(error)
       const userErrorMessage = renderErrorMessageForUser()
       containerForBreweryContainers.appendChild(userErrorMessage)
+      webpageBg.classList.add("error-msg-bg")
     }
   })
 }
@@ -38,14 +40,14 @@ function renderBrewery(breweryInfo) {
   const phoneTitle = document.createElement("h5")
   const breweryPhone = document.createElement("p")
 
-  breweryContainer.className = "bg-color-white width-100 padding-1 mb-2rem"
-  websiteTitle.className = "info-title "
-  addressTitle.className = "info-title "
-  phoneTitle.className = "info-title "
+  breweryContainer.className = "bg-color-white width-100 padding-1 mb-2rem opacity-95"
+  websiteTitle.className = "info-title drink-text"
+  addressTitle.className = "info-title drink-text"
+  phoneTitle.className = "info-title drink-text"
 
-  websiteTitle.textContent = "Website"
-  addressTitle.textContent = "Address"
-  phoneTitle.textContent = "Phone"
+  websiteTitle.textContent = "WEBSITE"
+  addressTitle.textContent = "ADDRESS"
+  phoneTitle.textContent = "PHONE"
   breweryName.textContent = breweryInfo.name
   breweryUrl.textContent = breweryInfo.website_url
   breweryStreet.textContent = breweryInfo.street
@@ -74,18 +76,14 @@ function renderBrewery(breweryInfo) {
 
 function renderErrorMessageForUser() {
   const errorMessageContainer = document.createElement("div")
-  const errorMessage = document.createElement("h1")
-  const buttonContainer = document.createElement("div")
   const tryAgainBtn = document.createElement("a")
-  errorMessage.className = "mb-2rem"
-  buttonContainer.className = "mt-3rem mb-2rem text-center"
-  tryAgainBtn.className = "try-again-btn"
-  errorMessage.textContent = "No locations found."
+  errorMessageContainer.className = "mt-3rem"
+  tryAgainBtn.className = "try-again-btn color-dark-gray"
   tryAgainBtn.textContent = "Try Again"
-  cityNameTitle.textContent = "Zero"
+  cityNameTitle.textContent = "No"
+  errorMsgTitle.textContent = "Found"
   tryAgainBtn.setAttribute("href", "lets-go-out.html")
-  buttonContainer.appendChild(tryAgainBtn)
-  errorMessageContainer.append(errorMessage, buttonContainer)
+  errorMessageContainer.append(tryAgainBtn)
 
   return errorMessageContainer
 }
@@ -94,6 +92,7 @@ function renderErrorMessageForUser() {
 const cityNameOnForm = localStorage.getItem("breweryCityName")
 const containerForBreweryContainers = document.querySelector(".brewery-content")
 const cityNameTitle = document.getElementById("city-name")
+const errorMsgTitle = document.getElementById("error-msg")
 const webpageBg = document.querySelector("brewery-bg")
 
 getBreweriesByCityName(cityNameOnForm)
