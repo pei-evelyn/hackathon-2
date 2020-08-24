@@ -55,6 +55,7 @@ function renderBrewery(breweryInfo) {
   breweryPhone.textContent = breweryInfo.phone
 
   breweryUrl.setAttribute("href", breweryInfo.website_url)
+  breweryUrl.setAttribute("target", "_blank")
 
   addressBlock.append(breweryCity, breweryState, breweryPostal)
   breweryAddress.append(breweryStreet, addressBlock)
@@ -82,7 +83,7 @@ function renderErrorMessageForUser() {
   errorMessage.textContent = "No locations found."
   tryAgainBtn.textContent = "Try Again"
   cityNameTitle.textContent = "Zero"
-  tryAgainBtn.setAttribute("href", "go-out.html")
+  tryAgainBtn.setAttribute("href", "lets-go-out.html")
   buttonContainer.appendChild(tryAgainBtn)
   errorMessageContainer.append(errorMessage, buttonContainer)
 
@@ -96,3 +97,8 @@ const cityNameTitle = document.getElementById("city-name")
 const webpageBg = document.querySelector("brewery-bg")
 
 getBreweriesByCityName(cityNameOnForm)
+
+const body = document.querySelector("body")
+window.addEventListener("load", function () {
+  body.className = "loaded"
+})
