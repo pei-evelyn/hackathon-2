@@ -7,11 +7,10 @@ body {
   opacity: 1;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 700px) {
+@media only screen and (min-width: 600px) and (orientation: landscape) and (max-width: 700px) {
   main {
     display: flex;
   }
-
   .logo {
     font-size: 1.5rem;
   }
@@ -20,31 +19,48 @@ body {
     margin: 0;
     text-align: center;
   }
-
   .heading-div {
     margin: 1rem auto;
   }
-
   .button-container {
     margin: 3.5rem auto;
   }
-
   .homepage-bg {
     background-image: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/home-bg.jpg");
     height: 100vh;
   }
-
   #alcohol-selection, #city-text-input {
     font-size: 1rem;
     width: 250px;
   }
-
   .a-main, button, .try-again-btn {
     font-size: 0.9rem;
     width: 200px;
   }
-
-  .brewery-title {
-
+  .main-list {
+    flex-direction: column;
   }
+  .recipe-content, .brewery-content {
+    text-align: center;
+    width: 68%;
+    opacity: 95%;
+  }
+  .drink-img-size {
+    height: 260px;
+    width: 260px;
+  }
+  ul {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+  .main-title {
+    font-size: 5rem;
+    text-align: center;
+  }
+
 }

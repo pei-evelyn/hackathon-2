@@ -57,7 +57,9 @@ function renderDrinkRecipes(drink) {
 
   drinkContainer.className = "bg-color-white width-100 padding-1 mb-2rem d-flex flex-column"
   drinkName.className = "padding-1"
-  drinkImg.className = "drink-img-size padding-1"
+  drinkImg.className = "drink-img-size"
+  ingredientTitle.className = "info-title"
+  directionTitle.className = "info-title"
 
   drinkImg.setAttribute("src", drink.strDrinkThumb)
   drinkName.textContent = drink.strDrink.toUpperCase()
@@ -70,7 +72,7 @@ function renderDrinkRecipes(drink) {
   ingredient6.textContent = `${drink.strMeasure6} ${drink.strIngredient6}`
   directionTitle.textContent = "DIRECTIONS"
   instructions.textContent = drink.strInstructions
-  instructions.className = "padding-1 drink-text"
+  instructions.className = "drink-text"
   ingredientList.className = "padding-1 width-100"
 
   const ingredients = [ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6]
