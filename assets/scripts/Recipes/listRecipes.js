@@ -86,3 +86,9 @@ const drinkRecipeContent = document.querySelector(".recipe-content")
 const randomDrinks = []
 
 getDrinkIdsByAlcoholName(alcoholType)
+
+const body = document.querySelector("body")
+
+window.addEventListener("load", function () {
+  body.className = "loaded"
+})

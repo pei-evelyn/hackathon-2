@@ -8,6 +8,7 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Pattaya&family=Playfair+Display+SC:wght@400;700;900&family=Playfair+Display:wght@400;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/styles/styles.css">
+  <link rel="stylesheet" href="assets/styles/transitions.css">
 </head>
 <body>
   <div class="homepage-bg bg height-100vh">
@@ -24,13 +25,27 @@
           <span>a drink.</span>
         </h1>
       </div>
-      <div class="d-flex text-center mb-2rem">
-        <a class="color-dark-gray a-styling" href="/stay-in-webpages/lets-stay-in.html">Let's stay in</a>
-      </div>
-      <div class="d-flex text-center">
-        <a class="color-dark-gray a-styling" href="/go-out-webpages/lets-go-out.html">Let's go out</a>
+      <div class="buttons">
+        <div class="d-flex text-center mb-2rem">
+          <a class="color-dark-gray a-styling" href="/stay-in-webpages/lets-stay-in.html">Let's stay in</a>
+        </div>
+        <div class="d-flex text-center">
+          <a class="color-dark-gray a-styling" href="/go-out-webpages/lets-go-out.html">Let's go out</a>
+        </div>
       </div>
     </main>
   </div>
+  <script>
+    const body = document.querySelector("body")
+    const buttonDiv = document.querySelector(".buttons")
+    window.addEventListener("load", function() {
+      body.className = "loaded"
+    })
+
+    buttonDiv.addEventListener("click", function() {
+      body.classList.add("leaving")
+    })
+
+  </script>
 </body>
 </html>

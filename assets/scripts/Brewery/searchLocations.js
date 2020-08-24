@@ -11,3 +11,8 @@ function handleSubmit(event) {
 
 const breweryForm = document.getElementById("brewery-form")
 breweryForm.addEventListener("submit", handleSubmit)
+
+const body = document.querySelector("body")
+window.addEventListener("load", function () {
+  body.className = "loaded"
+})
