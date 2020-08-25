@@ -7,7 +7,7 @@ function getBreweriesByCityName(storedCityName) {
         localStorage.clear()
         const userErrorMessage = renderErrorMessageForUser()
         containerForBreweryContainers.appendChild(userErrorMessage)
-        webpageBg.classList.add("error-msg-bg")
+        webpageBg.classList.add("height-100vh")
       } else {
         for (let i = 0; i < 10; i++) {
           let renderBreweryOutput = renderBrewery(breweriesInCity[i])
@@ -20,7 +20,7 @@ function getBreweriesByCityName(storedCityName) {
       console.error(error)
       const userErrorMessage = renderErrorMessageForUser()
       containerForBreweryContainers.appendChild(userErrorMessage)
-      webpageBg.classList.add("error-msg-bg")
+      webpageBg.classList.add("height-100vh")
     }
   })
 }
@@ -93,7 +93,7 @@ const cityNameOnForm = localStorage.getItem("breweryCityName")
 const containerForBreweryContainers = document.querySelector(".brewery-content")
 const cityNameTitle = document.getElementById("city-name")
 const errorMsgTitle = document.getElementById("error-msg")
-const webpageBg = document.querySelector("brewery-bg")
+const webpageBg = document.querySelector(".brewery-bg")
 
 getBreweriesByCityName(cityNameOnForm)
 
