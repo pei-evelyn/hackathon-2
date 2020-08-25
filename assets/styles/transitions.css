@@ -80,7 +80,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 400px) and (orientation: portrait) {
+@media only screen and (min-width: 450px) and (orientation: portrait) {
   .logo {
     font-size: 3rem;
   }
