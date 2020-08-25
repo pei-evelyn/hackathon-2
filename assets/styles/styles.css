@@ -16,6 +16,27 @@ span {
   margin: 0;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i {
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+i:hover {
+  color: #919191;
+}
+
+.a-main:hover, .try-again-btn:hover, #stayin-submit-btn:hover, #brewery-submit-btn:hover {
+  background-color: #c6c9c9;
+  border-color: #919999;
+  opacity: 95%;
+}
+
 .bg {
   width: 100%;
   background-repeat: no-repeat;
@@ -25,8 +46,7 @@ span {
 
 .logo {
   font-family: 'Pattaya', sans-serif;
-  font-size: 1.8rem;
-  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .main-title {
@@ -48,6 +68,7 @@ span {
   padding: 1.2rem;
   width: 55%;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .a-main {
@@ -55,15 +76,22 @@ span {
   color: #3d3d3d;
 }
 
-button, .try-again-btn {
+.try-again-btn {
   background-color: #d8d8d8;
-  border: 1px solid #c4c4c4;
+  border-color: #b3b2b2;
   color: #fcfcfc;
 }
 
+#stayin-submit-btn {
+  background-color: #d8d8d8;
+  border: 1px solid #b3b2b2;
+  color: #3d3d3d;
+}
+
 #brewery-submit-btn {
-  background-color: #707070;
-  border-color: #696969;
+  border: 1px solid #c4c4c4;
+  background-color: #797979;
+  border-color: #808080;
 }
 
 .homepage-bg {
@@ -145,10 +173,6 @@ button, .try-again-btn {
   line-height: 1.2;
 }
 
-.error-msg-bg {
-  height: 700px;
-}
-
 /* Utility Classes */
 
 .text-center {
@@ -209,4 +233,8 @@ button, .try-again-btn {
 
 .opacity-95 {
   opacity: 95%;
+}
+
+.height-100vh {
+  height: 100vh;
 }
