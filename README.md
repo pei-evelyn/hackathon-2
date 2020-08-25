@@ -11,7 +11,7 @@ A dynamic web application for alcohol consumers who want drink recipes featuring
 
 ## Live Demo
 
-Try the application live at [https://pei-evelyn.github.io/hackathon-2/](https://pei-evelyn.github.io/hackathon-2/)
+Try the application live at [https://github.com/pei-evelyn/tappd.git](https://github.com/pei-evelyn/tappd.git)
 
 ## Features
 
@@ -20,6 +20,10 @@ Try the application live at [https://pei-evelyn.github.io/hackathon-2/](https://
 - Users can see list of drink recipes correlating to type of alcohol previously selected.
 - Users can input city of their choice if "Go Out" was choosen.
 - Users can see list of breweries correlating to city previously inputted.
+
+## Preview
+
+<!-- ![Tappd](assets/images/tappd.gif) -->
 
 ### Getting Started
 
