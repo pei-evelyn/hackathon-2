@@ -1,6 +1,6 @@
-# hackathon-2
+# tappd
 
-A dynamic web application for alcohol consumers who want drink recipes featuring a liquor of their choice or want a list of different breweries in a city of their choice when going out.
+A dynamic web application for alcohol consumers who want drink recipes featuring a liquor of their choice or want a list of different breweries in a city of their choice.
 
 ## Technologies Used
 
@@ -16,20 +16,20 @@ Try the application live at [https://github.com/pei-evelyn/tappd.git](https://gi
 ## Features
 
 - Users can choose to "Stay In" or "Go Out".
-- Users can select alcohol type from dropdown menu if "Stay In" was choosen.
-- Users can see list of drink recipes correlating to type of alcohol previously selected.
-- Users can input city of their choice if "Go Out" was choosen.
-- Users can see list of breweries correlating to city previously inputted.
+- Users can select alcohol type from dropdown menu if "Stay In" is choosen.
+- Users can see list of drink recipes correlating to type of alcohol selected previously.
+- Users can input city of their choice if "Go Out" is choosen.
+- Users can see list of breweries correlating to city inputted previously.
 
 ## Preview
 
-<!-- ![Tappd](assets/images/tappd.gif) -->
+![Tappd](assets/images/tappd.gif)
 
 ### Getting Started
 
 1. Clone the repository.
 
     ```shell
-    git clone https://github.com/pei-evelyn/hackathon-2.git
-    cd hackathon-2
+    git clone https://github.com/pei-evelyn/tappd.git
+    cd tappd
     ```
