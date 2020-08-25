@@ -32,7 +32,7 @@ function getDrinkInfo(drinkId) {
 
 function selectRandomDrinkIds(drinks) {
   const randomDrinkIds = []
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 8; i++) {
     const randomNum = Math.floor(Math.random() * drinks.length)
     const randomDrinkIdFromList = parseInt(drinks[randomNum].idDrink)
     randomDrinkIds.push(randomDrinkIdFromList)
@@ -80,6 +80,12 @@ function renderDrinkRecipes(drink) {
   for (let i = 0; i < ingredients.length; i++) {
     if (ingredients[i].textContent === "null null") {
       ingredients[i].remove()
+    } else if (ingredients[i].textContent.includes("null")) {
+      const ingredientNull = ingredients[i].textContent
+      const removedNullFromString = ingredientNull.replace("null ", "")
+      ingredients[i].textContent = removedNullFromString
+      ingredients[i].className = "drink-text"
+      ingredientList.appendChild(ingredients[i])
     } else {
       ingredients[i].className = "drink-text"
       ingredientList.appendChild(ingredients[i])
