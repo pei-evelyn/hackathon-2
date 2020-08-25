@@ -9,7 +9,7 @@ function getBreweriesByCityName(storedCityName) {
         containerForBreweryContainers.appendChild(userErrorMessage)
         webpageBg.classList.add("height-100vh")
       } else {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < breweriesInCity.length; i++) {
           let renderBreweryOutput = renderBrewery(breweriesInCity[i])
           containerForBreweryContainers.appendChild(renderBreweryOutput)
         }

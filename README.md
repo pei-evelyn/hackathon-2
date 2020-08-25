@@ -1,2 +1,5 @@
 # hackathon-2
-Second hackathon (individual) using 2 public APIs 
+
+A dynamic web application for alcohol consumers who want drink recipes featuring a liquor of their choice or want a list of different breweries in a city of their choice when going out.
+
+## Technologies Used
