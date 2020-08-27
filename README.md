@@ -11,7 +11,12 @@ A dynamic web application for alcohol consumers who want drink recipes featuring
 
 ## Live Demo
 
-Try the application live at [https://github.com/pei-evelyn/tappd.git](https://github.com/pei-evelyn/tappd.git)
+Try the application live at [https://pei-evelyn.github.io/tappd/](https://pei-evelyn.github.io/tappd/)
+
+For best viewing:
+- Right click on mouse and select "Inspect" (Ctrl + Shift + J)
+- Click "Toggle Device Toolbar" (Ctrl + Shift + M)
+- Select "iPhone 6/7/8" from dropdown menu
 
 ## Features
 
