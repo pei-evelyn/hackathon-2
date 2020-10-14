@@ -187,6 +187,10 @@ i:hover {
   padding: 1rem;
 }
 
+.padding-bottom-2 {
+  padding-bottom: 1.5rem;
+}
+
 .color-dark-gray {
   color: #3d3d3d;
 }
@@ -237,4 +241,17 @@ i:hover {
 
 .height-100vh {
   height: 100vh;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.brewery-container
+.recipe-container {
+  width: 100%;
+}
+
+.justify-center {
+  justify-content: center;
 }
