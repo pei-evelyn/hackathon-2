@@ -90,7 +90,7 @@ i:hover {
 
 #brewery-submit-btn {
   border: 1px solid #c4c4c4;
-  background-color: #797979;
+  background-color: #d8d8d8;
   border-color: #808080;
 }
 
@@ -247,8 +247,7 @@ i:hover {
   width: 30%;
 }
 
-.brewery-container
-.recipe-container {
+.brewery-container .recipe-container {
   width: 100%;
 }
 

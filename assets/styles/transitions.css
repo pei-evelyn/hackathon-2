@@ -76,8 +76,7 @@ body {
     width: 40%;
   }
   .a-main,
-  button,
-  .try-again-btn {
+  button{
     width: 25%;
   }
   .recipe-content,
@@ -97,6 +96,9 @@ body {
   .recipe-container {
     width: 45%;
     margin: 1rem;
+  }
+  .try-again-btn {
+    width: 100%;
   }
 }
 
