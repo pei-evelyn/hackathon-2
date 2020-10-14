@@ -55,7 +55,7 @@ function renderDrinkRecipes(drink) {
   const directionTitle = document.createElement("h4")
   const instructions = document.createElement("p")
 
-  drinkContainer.className = "bg-color-white width-100 padding-1 mb-2rem d-flex flex-column"
+  drinkContainer.className = "bg-color-white recipe-container padding-1 mb-2rem d-flex flex-column"
   drinkName.className = "padding-1"
   drinkImg.className = "drink-img-size"
   ingredientTitle.className = "info-title"

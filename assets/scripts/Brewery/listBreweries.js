@@ -3,6 +3,7 @@ function getBreweriesByCityName(storedCityName) {
     method: "GET",
     url: `https://api.openbrewerydb.org/breweries?by_city=${storedCityName}`,
     success: (breweriesInCity) => {
+      console.log(breweriesInCity)
       if (breweriesInCity.length < 1) {
         localStorage.clear()
         const userErrorMessage = renderErrorMessageForUser()
@@ -38,9 +39,9 @@ function renderBrewery(breweryInfo) {
   const breweryState = document.createElement("span")
   const breweryPostal = document.createElement("span")
   const phoneTitle = document.createElement("h4")
-  const breweryPhone = document.createElement("p")
+  const breweryPhone = document.createElement("a")
 
-  breweryContainer.className = "bg-color-white width-100 padding-1 mb-2rem opacity-95"
+  breweryContainer.className = "bg-color-white brewery-container padding-1 mb-2rem opacity-95"
   websiteTitle.className = "info-title drink-text"
   addressTitle.className = "info-title drink-text"
   phoneTitle.className = "info-title drink-text"
@@ -49,15 +50,24 @@ function renderBrewery(breweryInfo) {
   addressTitle.textContent = "ADDRESS"
   phoneTitle.textContent = "PHONE"
   breweryName.textContent = breweryInfo.name
-  breweryUrl.textContent = breweryInfo.website_url
+  breweryUrl.textContent = breweryInfo.website_url.toLowerCase()
   breweryStreet.textContent = breweryInfo.street
   breweryCity.textContent = `${breweryInfo.city}, `
   breweryState.textContent = `${breweryInfo.state} `
   breweryPostal.textContent = breweryInfo.postal_code
-  breweryPhone.textContent = breweryInfo.phone
+
+  const phoneArr = breweryInfo.phone.split("")
+  phoneArr.unshift('(')
+  phoneArr.splice(4, 0, ')')
+  phoneArr.splice(8, 0, '-')
+  breweryPhone.textContent = phoneArr.join('')
+
+
 
   breweryUrl.setAttribute("href", breweryInfo.website_url)
   breweryUrl.setAttribute("target", "_blank")
+
+  breweryPhone.setAttribute("href", `tel:${breweryInfo.phone}`)
 
   addressBlock.append(breweryCity, breweryState, breweryPostal)
   breweryAddress.append(breweryStreet, addressBlock)
@@ -71,6 +81,16 @@ function renderBrewery(breweryInfo) {
     breweryPhone
   )
 
+  if (breweryUrl.textContent === '') {
+    websiteTitle.remove()
+    breweryUrl.remove()
+  }
+
+  if (breweryPhone.textContent === '()-') {
+    phoneTitle.remove()
+    breweryPhone.remove()
+  }
+
   return breweryContainer
 }
 
@@ -78,7 +98,7 @@ function renderErrorMessageForUser() {
   const errorMessageContainer = document.createElement("div")
   const tryAgainBtn = document.createElement("a")
   errorMessageContainer.className = "mt-3rem"
-  tryAgainBtn.className = "try-again-btn color-dark-gray"
+  tryAgainBtn.className = "try-again-btn color-dark-gray d-flex justify-center"
   tryAgainBtn.textContent = "Try Again"
   cityNameTitle.textContent = "No"
   errorMsgTitle.textContent = "Found"

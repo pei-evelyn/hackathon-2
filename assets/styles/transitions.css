@@ -24,21 +24,28 @@ body {
     margin: 3.5rem auto;
   }
   .homepage-bg {
-    background-image: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/home-bg.jpg");
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)),
+      url("../images/home-bg.jpg");
     height: 100vh;
   }
-  #alcohol-selection, #city-text-input {
+  #alcohol-selection,
+  #city-text-input {
     font-size: 1rem;
     width: 250px;
   }
-  .a-main, button, .try-again-btn {
+  .a-main,
+  button,
+  .try-again-btn {
     font-size: 0.9rem;
     width: 200px;
   }
   .main-list {
     flex-direction: column;
   }
-  .recipe-content, .brewery-content {
+  .recipe-content,
+  .brewery-content {
     text-align: center;
     width: 68%;
     opacity: 95%;
@@ -63,21 +70,33 @@ body {
     font-size: 4.5rem;
     text-align: center;
   }
-  #alcohol-selection, #city-text-input {
+  #alcohol-selection,
+  #city-text-input {
     font-size: 1rem;
     width: 40%;
   }
-  .a-main, button, .try-again-btn {
+  .a-main,
+  button,
+  .try-again-btn {
     width: 25%;
   }
-  .recipe-content, .brewery-content {
+  .recipe-content,
+  .brewery-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
-    width: 60%;
     opacity: 95%;
+    margin: auto
   }
   .drink-img-size {
     height: 300px;
     width: 300px;
+  }
+  .brewery-container,
+  .recipe-container {
+    width: 45%;
+    margin: 1rem;
   }
 }
 
@@ -91,18 +110,22 @@ body {
     margin: 4rem;
   }
 
-  #alcohol-selection, #city-text-input {
+  #alcohol-selection,
+  #city-text-input {
     font-size: 1.3rem;
     width: 60%;
     padding: 1.5rem;
   }
-  .a-main, button, .try-again-btn {
+  .a-main,
+  button,
+  .try-again-btn {
     font-size: 1.2rem;
     width: 42%;
     margin: 1rem auto;
     padding: 1.2rem;
   }
-  .recipe-content, .brewery-content {
+  .recipe-content,
+  .brewery-content {
     text-align: center;
     width: 65%;
     opacity: 95%;
