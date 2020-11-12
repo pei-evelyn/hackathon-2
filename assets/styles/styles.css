@@ -115,7 +115,8 @@ i:hover {
 }
 
 .recipe-bg {
-  background-color: #ddffff;
+  background-image: linear-gradient( rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.42)), url("../images/recipes-bg.jpg");
+  background-attachment: fixed;
 }
 
 #alcohol-selection {
