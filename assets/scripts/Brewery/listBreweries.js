@@ -50,19 +50,23 @@ function renderBrewery(breweryInfo) {
   addressTitle.textContent = "ADDRESS"
   phoneTitle.textContent = "PHONE"
   breweryName.textContent = breweryInfo.name
-  breweryUrl.textContent = breweryInfo.website_url.toLowerCase()
+
+  if (breweryInfo.website_url) {
+    breweryUrl.textContent = breweryInfo.website_url.toLowerCase()
+  }
+
   breweryStreet.textContent = breweryInfo.street
   breweryCity.textContent = `${breweryInfo.city}, `
   breweryState.textContent = `${breweryInfo.state} `
   breweryPostal.textContent = breweryInfo.postal_code
 
-  const phoneArr = breweryInfo.phone.split("")
-  phoneArr.unshift('(')
-  phoneArr.splice(4, 0, ')')
-  phoneArr.splice(8, 0, '-')
-  breweryPhone.textContent = phoneArr.join('')
-
-
+  if (breweryInfo.phone) {
+    const phoneArr = breweryInfo.phone.split("")
+    phoneArr.unshift('(')
+    phoneArr.splice(4, 0, ')')
+    phoneArr.splice(8, 0, '-')
+    breweryPhone.textContent = phoneArr.join('')
+  }
 
   breweryUrl.setAttribute("href", breweryInfo.website_url)
   breweryUrl.setAttribute("target", "_blank")
@@ -81,14 +85,12 @@ function renderBrewery(breweryInfo) {
     breweryPhone
   )
 
-  if (breweryUrl.textContent === '') {
+  if (!breweryUrl.textContent) {
     websiteTitle.remove()
-    breweryUrl.remove()
   }
 
-  if (breweryPhone.textContent === '()-') {
+  if (!breweryPhone.textContent) {
     phoneTitle.remove()
-    breweryPhone.remove()
   }
 
   return breweryContainer

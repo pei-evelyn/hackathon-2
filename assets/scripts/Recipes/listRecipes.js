@@ -3,6 +3,7 @@ function getDrinkIdsByAlcoholName(valueName) {
     method: "GET",
     url: `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${valueName}`,
     success: (data) => {
+      console.log(data)
       alcoholTypeHeading.textContent = valueName
       const drinkIds = selectRandomDrinkIds(data.drinks)
       for (let i = 0; i < drinkIds.length; i++) {
@@ -20,6 +21,7 @@ function getDrinkInfo(drinkId) {
     method: "GET",
     url: `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`,
     success: (drinkData) => {
+      console.log(drinkData)
       const drink = drinkData.drinks[0]
       const completeDrink = renderDrinkRecipes(drink)
       drinkRecipeContent.appendChild(completeDrink)
@@ -32,10 +34,12 @@ function getDrinkInfo(drinkId) {
 
 function selectRandomDrinkIds(drinks) {
   const randomDrinkIds = []
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 10; i++) {
     const randomNum = Math.floor(Math.random() * drinks.length)
     const randomDrinkIdFromList = parseInt(drinks[randomNum].idDrink)
-    randomDrinkIds.push(randomDrinkIdFromList)
+    if (!randomDrinkIds.includes(randomDrinkIdFromList)) {
+      randomDrinkIds.push(randomDrinkIdFromList)
+    }
   }
   return randomDrinkIds
 }
